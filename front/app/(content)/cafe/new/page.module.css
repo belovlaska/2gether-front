@@ -1,0 +1,272 @@
+.main h1 {
+    margin-top: 3vh;
+    text-align: center;
+    color: var(--text-purple);
+}
+
+.cafe_info {
+    background: var(--background-purple);
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: var(--text-white);
+    width: max-content;
+    margin: 1vh auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.lobby {
+    margin: 3vh 5vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 3vw;
+    row-gap: 3vh;
+}
+
+.lobby > * {
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: var(--text-white);
+    height: max-content;
+
+}
+
+.lobby__datetime {
+    background: var(--background-gradient);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.lobby__datetime label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.lobby__time {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.lobby__datetime input[type='number'] {
+    width: calc(3ic + 10px);
+    aspect-ratio: 1.3/1;
+    text-align: center;
+    background: transparent;
+    border: 1px solid var(--text-white);
+}
+
+.cafe_card__title {
+    color: var(--text-purple);
+    font-size: 30px;
+    background: var(--background);
+    border-radius: 30px;
+    width: max-content;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    margin: auto;
+}
+
+.lobby > :has(.lobby__games) {
+    padding: 0;
+}
+
+.lobby__description {
+    background: var(--background-purple);
+    width: 100%;
+    border-radius: 30px;
+    padding: 20px;
+    padding-top: 30px;
+    color: var(--text-white);
+    margin-top: -20px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+    hyphens: auto;
+    overflow: hidden;
+    resize: vertical;
+    font-size: inherit;
+}
+
+.lobby__description::placeholder {
+    color: var(--text-white);
+    opacity: 0.8;
+}
+
+.lobby__games {
+    background: var(--background-purple);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    border-radius: 30px;
+    padding: 20px;
+    padding-top: 30px;
+    color: var(--text-white);
+    margin-top: -20px;
+}
+
+.lobby__game {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.lobby__game input {
+    appearance: none;
+    width: 1.25em;
+    height: 1.25em;
+    border: 3px solid var(--text-white);
+    border-radius: 100%;
+}
+
+.lobby__game input:checked {
+    background: var(--text-white);
+}
+
+.lobby__confirm button, .lobby__games button {
+    background: var(--background-gradient);
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    color: var(--text-white);
+    cursor: pointer;
+    transition: var(--fast-transition);
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.lobby__settings {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25em;
+    gap: 15px;
+    background: var(--background-gradient);
+    width: 100%;
+    border-radius: 30px;
+    padding: 20px;
+    padding-top: 30px;
+    color: var(--text-white);
+    margin-top: -20px;
+}
+
+.lobby__settings label {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+
+.cafe__image {
+    border-radius: 30px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cafe__image > div {
+    background: var(--background-purple);
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: var(--text-white);
+    height: max-content;
+    margin-top: -20px;
+
+}
+
+.cafe__image label {
+    aspect-ratio: 5/7;
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+    padding-top: 30px;
+    color: var(--text-white);
+    margin-top: 20px;
+    border: 2px solid var(--text-white);
+    cursor: pointer;
+}
+
+.cafe__image input::file-selector-button {
+    display: none;
+}
+
+.cafe__image input[type='file'] {
+    color: transparent;
+    width: 0;
+}
+
+.cafe__image svg {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 80%;
+}
+
+
+
+
+
+
+
+
+.label {
+    user-select: none;
+    text-align: left;
+    position: relative;
+}
+
+.label__placeholder {
+    color: var(--text-purple);
+    font-size: inherit;
+    position: absolute;
+    left: 10px;
+    top: 45%;
+    transition: var(--fast-transition);
+    pointer-events: none;
+}
+
+.label:focus-within .label__placeholder, .label:not(:has(input:placeholder-shown)) .label__placeholder {
+    font-size: smaller;
+    top: 10px;
+}
+
+.label input {
+    font-size: 18px;
+    border: 1px solid var(--background-purple);
+    border-radius: 5px;
+    padding: 10px;
+    height: fit-content;
+    margin-top: 10px;
+    width: 100%;
+    transition: var(--fast-transition);
+}
+
+.label input:focus {
+    border-color: cornflowerblue;
+    outline: none;
+    box-shadow: 1px 1px 4px -1px var(--background-purple);
+}
+
+.home__link {
+    background: var(--background-gradient);
+    padding: 10px;
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    color: var(--text-white);
+}

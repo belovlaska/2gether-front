@@ -1,0 +1,118 @@
+.title {
+	margin-top: 5vh;
+	font-family: sans-serif;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 43px;
+    text-align: center;
+	text-transform: uppercase;
+	color: var(--text-purple);
+}
+
+.form {
+	position: relative;
+	margin-top: 13vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 11pt;
+}
+
+.label {
+    user-select: none;
+    text-align: left;
+	position: relative;
+}
+
+.label__placeholder {
+	color: var(--text-purple);
+	font-size: inherit;
+	position: absolute;
+	left: 10px;
+	top: 45%;
+	transition: var(--fast-transition);
+	pointer-events: none;
+}
+
+.label:focus-within .label__placeholder, .label:not(:has(input:placeholder-shown)) .label__placeholder {
+	font-size: smaller;
+	top: 10px;
+}
+
+.label input {
+    font-size: 18px;
+    border: 1px solid var(--background-purple);
+    border-radius: 5px;
+    padding: 10px;
+    height: fit-content;
+    margin-top: 10px;
+	min-width: min(474px, 80vw);
+	transition: var(--fast-transition);
+}
+
+.label input:focus {
+    border-color: cornflowerblue;
+    outline: none;
+	box-shadow: 1px 1px 4px -1px var(--background-purple);
+}
+
+.form button {
+    font-size: 12pt;
+    font-family: inherit;
+    background: var(--background-gradient);
+    color: white;
+    border-radius: 15px;
+    padding: 10px 55px;
+    cursor: pointer;
+    transition: var(--fast-transition);
+	border: none;
+}
+
+.form button:hover, .form button:disabled {
+	filter: brightness(1.2);
+}
+
+.invisible {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.buttons {
+	display: grid;
+	min-width: min(474px, 80vw);
+	align-items: center;
+}
+
+.buttons::before {
+	content: '';
+	grid-column: 1;
+}
+
+.register_link {
+	font-weight: 400;
+	font-size: 16px;
+	text-align: center;
+	text-decoration: underline;
+	color: var(--text-purple);
+}
+
+.register_link:hover {
+	filter: brightness(70%);
+}
+
+@media (max-width: 500px) {
+	.socials button {
+		width: 75vw;
+	}
+
+	.buttons {
+		row-gap: 15px;
+	}
+
+	.buttons::before {
+		content: none;
+	}
+}

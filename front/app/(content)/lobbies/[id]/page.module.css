@@ -1,0 +1,61 @@
+.main h1 {
+    margin-top: 3vh;
+    text-align: center;
+    color: var(--text-purple);
+}
+
+.cafe_info {
+    background: var(--background-purple);
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: var(--text-white);
+    width: max-content;
+    margin: 1vh auto;
+}
+
+.lobbies {
+    margin: 3vh 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5vw;
+}
+
+.lobby_card {
+    background: var(--background-gradient);
+    padding: 20px;
+    border-radius: 30px;
+    color: var(--text-white);
+    font-weight: bold;
+}
+
+.lobby_card__join {
+    margin-top: 10px;
+    background: var(--background-purple);
+    border: none;
+    color: var(--text-white);
+    padding: 10px;
+    border-radius: 25px;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    transition: var(--fast-transition);
+}
+
+.lobby_card__join:hover:not(.lobby_card__join_disabled) {
+    filter: brightness(1.2);
+}
+
+.lobby_card__join_disabled {
+    filter: brightness(0.8);
+}
+
+.home__link {
+    background: var(--background-gradient);
+    padding: 10px;
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    color: var(--text-white);
+}

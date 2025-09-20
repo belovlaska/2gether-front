@@ -1,0 +1,38 @@
+.tooltipContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: max-content;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 3px;
+    position: absolute;
+    z-index: 100;
+    bottom: 125%; /* Position above the item */
+    left: 50%;
+    margin-left: -80px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltipContainer:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.item {
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.item:hover {
+    background: var(--background-gradient);
+}

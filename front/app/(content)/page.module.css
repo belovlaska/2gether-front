@@ -1,0 +1,228 @@
+.main {
+    margin: 1vh 5vw;
+    position: relative;
+}
+
+.cafe__new {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12pt;
+    font-family: inherit;
+    background: var(--background-gradient);
+    color: white;
+    border-radius: 15px;
+    padding: 10px 55px;
+    cursor: pointer;
+    transition: var(--fast-transition);
+    border: none;
+}
+
+.cards {
+    margin-top: 3vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vw;
+}
+
+.cafe_card {
+    transition: var(--fast-transition);
+    position: relative;
+}
+
+.cafe_card__title {
+    color: var(--text-purple);
+    font-size: 30px;
+    background: var(--background);
+    border-radius: 30px;
+    width: max-content;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    left: 40px;
+}
+
+.cafe_card__content {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    background: var(--background-gradient);
+    margin-top: -20px;
+    padding: 30px 10px 10px 10px;
+    border-radius: 30px;
+    font-size: 20px;
+    color: var(--text-white);
+    width: 100%;
+}
+
+.cafe_card__image {
+    background-color: var(--background);
+    aspect-ratio: 5/7;
+    border-radius: 30px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cafe_card__info {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cafe_card button {
+    width: 100%;
+    background: var(--background-purple);
+    color: var(--text-white);
+    padding: 10px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cafe_card button:hover {
+    filter: brightness(1.2);
+}
+
+.cafe_card__address {
+    font-family: inherit;
+}
+
+.cafe_card__address::first-line {
+    font-size: larger;
+}
+
+.cafe_card__games_content {
+    background: var(--background-purple);
+    margin-top: -20px;
+    padding: 30px 10px 20px 10px;
+    border-radius: 30px;
+    font-size: 20px;
+    color: var(--text-white);
+    width: 100%;
+}
+
+.cafe_card__games_content > div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cafe_card__games_title {
+    color: var(--text-white);
+    font-size: 26px;
+    background-image: var(--background-gradient);
+    background-size: 42.5vw;
+    background-position: -6vw;
+    border-radius: 30px;
+    width: max-content;
+    padding: 10px 30px;
+    position: relative;
+    z-index: 1;
+    margin: auto;
+    background-clip: border-box;
+}
+
+.label {
+    user-select: none;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+    min-width: 200px;
+}
+
+.main__filters {
+    margin-top: 2vh;
+}
+
+.main__filters_form input, .main__filters_form select {
+    font-size: 18px;
+    border: 1px solid var(--background-purple);
+    border-radius: 5px;
+    padding: 8px;
+    height: fit-content;
+    transition: var(--fast-transition);
+}
+
+.main__filters_form input:focus, .main__filters_form select:focus {
+    border-color: cornflowerblue;
+    outline: none;
+    box-shadow: 1px 1px 4px -1px var(--background-purple);
+}
+
+.main__filters_form {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.main__filters_form button {
+    font-size: 12pt;
+    font-family: inherit;
+    background: var(--background-gradient);
+    color: white;
+    border-radius: 15px;
+    padding: 10px 55px;
+    cursor: pointer;
+    transition: var(--fast-transition);
+    border: none;
+}
+
+.main__filters_form label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__filters_form input[type="checkbox"] {
+    cursor: pointer;
+    appearance: none;
+    aspect-ratio: 1/1;
+    width: auto;
+    height: 20px;
+    border: 3px solid var(--background-purple);
+}
+
+.main__filters_form input[type="checkbox"]:checked {
+    background: var(--background-purple);
+}
+
+.main__filters_panel {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main__filters_panel_item {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: max-content;
+    background-color: var(--background-purple);
+    color: var(--text-white);
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.main__filters_panel_item img {
+    cursor: pointer;
+}
+
+.cafe_card__edit {
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    aspect-ratio: 1/1;
+    width: 30px;
+    height: 30px;
+}
+
+.cafe_card__edit img {
+    width: 100%;
+    height: 100%;
+}

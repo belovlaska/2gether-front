@@ -1,0 +1,77 @@
+/* Style for the .dialog */
+.dialog {
+    background-color: white; /* Background color */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the .dialog */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    width: 400px; /* Width of the .dialog */
+}
+
+/* Style for the form */
+.dialog form {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Column direction */
+}
+
+/* Style for the heading */
+.dialog h2 {
+    margin: 0 0 15px; /* Margin below the heading */
+    font-size: 24px; /* Font size */
+    color: #333; /* Text color */
+}
+
+/* Style for the error message */
+.dialog p {
+    color: red; /* Error text color */
+    font-size: 14px; /* Font size */
+    margin: 0 0 15px; /* Margin below the error message */
+}
+
+/* Style for labels */
+.dialog label {
+    margin-bottom: 10px; /* Margin below each label */
+    font-weight: bold; /* Bold text */
+}
+
+/* Style for input fields */
+.dialog input[type="text"],
+.dialog input[type="number"],
+.dialog textarea {
+    padding: 8px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 4px; /* Rounded corners */
+    margin-top: 5px; /* Margin above input fields */
+    width: 100%; /* Full width */
+}
+
+/* Style for textarea */
+.dialog textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Style for checkbox inputs */
+.dialog input[type="checkbox"] {
+    margin-left: 10px; /* Margin to the left of checkbox */
+}
+
+/* Style for buttons */
+.dialog button {
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding inside buttons */
+    margin-top: 10px; /* Margin above buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Style for the close button */
+.dialog button[type="button"] {
+    background-color: #f44336; /* Close button background color */
+}
+
+/* Style for buttons on hover */
+.dialog button:hover {
+    opacity: 0.9; /* Slightly transparent on hover */
+}
